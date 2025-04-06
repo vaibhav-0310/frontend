@@ -21,7 +21,7 @@ function SignupPage() {
       const response = await axios.post("https://back-c06a.onrender.com/api/signup", formData, { withCredentials: true}));
 
       console.log("Login Success:", response.data);
-      navigate('/dashboard');
+      navigate(`/dashboard/${response.data.user.id}`);
     } catch (err) {
       setError("Login failed. Please check your credentials.");
       console.error("Login Error:", err);
