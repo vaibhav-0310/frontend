@@ -19,7 +19,6 @@ function SignupPage() {
     setError(null);
     try {
       const response = await axios.post("https://back-c06a.onrender.com/api/signup", formData, { withCredentials: true}));
-
       console.log("Login Success:", response.data);
       navigate(`/dashboard/${response.data.user.id}`);
     } catch (err) {
