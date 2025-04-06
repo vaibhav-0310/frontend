@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function SignupPage() {
-   axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   const [formData, setFormData] = useState({ username: "", password: "", email: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -18,7 +18,8 @@ function SignupPage() {
     setIsSubmitting(true);
     setError(null);
     try {
-      const response = await axios.post("https://back-c06a.onrender.com/api/signup", formData, { withCredentials: true}));
+      const response = await axios.post("https://back-c06a.onrender.com/api/signup", formData, { withCredentials: true});
+
       console.log("Login Success:", response.data);
       navigate(`/dashboard/${response.data.user.id}`);
     } catch (err) {
@@ -75,7 +76,7 @@ function SignupPage() {
             disabled={isSubmitting}
             className="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-md"
           >
-            {isSubmitting ? 'Signing up...' : 'Sign up'}
+            {isSubmitting ? 'Logging In...' : 'Log In'}
           </button>
         </form>
 
