@@ -76,7 +76,7 @@ function SignupPage() {
             disabled={isSubmitting}
             className="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-md"
           >
-            {isSubmitting ? 'Logging In...' : 'Log In'}
+            {isSubmitting ? 'Signing up.... : 'Sign up!'}
           </button>
         </form>
 
