@@ -50,7 +50,7 @@ function App() {
                 />
 
                 {/* Redirect root path to dashboard (ProtectedRoute will handle redirect to login if needed) */}
-                <Route path="/" element={<Navigate replace to="/dashboard" />} />
+                <Route path="/" element={<Navigate replace to="/login" />} />
 
                 {/* Catch-all 404 Not Found Route */}
                 <Route path="*" element={
